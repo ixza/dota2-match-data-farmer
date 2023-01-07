@@ -11,6 +11,9 @@ OD_MATCH_URL = 'https://api.opendota.com/api/matches/'
 OD_PARSED_MATCH_URL = 'https://api.opendota.com/api/parsedMatches'
 JSON_FILE_PATH = 'datasets/'
 
+if not os.path.exists(JSON_FILE_PATH):
+   os.makedirs(JSON_FILE_PATH)
+
 def clamp(n, minn, maxn):
     if n < minn:
         return minn
